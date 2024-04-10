@@ -78,7 +78,7 @@ shadowauth(const char *myname, int persist)
 	if (gethostname(host, sizeof(host)))
 		snprintf(host, sizeof(host), "?");
 	snprintf(cbuf, sizeof(cbuf),
-			"\rdoas (%.32s@%.32s) password: ", myname, host);
+			"\rPassword for %.32s@%.32s: ", myname, host);
 	challenge = cbuf;
 
 	response = readpassphrase(challenge, rbuf, sizeof(rbuf), RPP_REQUIRE_TTY);
